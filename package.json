@@ -1,0 +1,34 @@
+{
+	"name": "@ziao/conveyor",
+	"version": "0.1.1",
+	"main": "dist/index.js",
+	"license": "MIT",
+	"private": false,
+	"scripts": {
+		"format": "prettier -w src/**/*.ts",
+		"build": "rimraf dist && tsc",
+		"build:watch": "rimraf dist && tsc --watch",
+		"test": "ts-jest"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@types/jest": "^26.0.23",
+		"@types/node": "^15.6.1",
+		"husky": "^6.0.0",
+		"jest": "^27.0.1",
+		"prettier": "^2.3.0",
+		"rimraf": "^3.0.2",
+		"ts-jest": "^27.0.1",
+		"typescript": "^4.3.2"
+	},
+	"prettier": {
+		"printWidth": 120,
+		"useTabs": true,
+		"tabWidth": 4
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "yarn format"
+		}
+	}
+}
